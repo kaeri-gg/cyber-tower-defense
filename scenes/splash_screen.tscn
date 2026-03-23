@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://qk4cctayieey"]
+
+[ext_resource type="Script" uid="uid://c8alujorx7t72" path="res://scripts/splash_screen.gd" id="1_hsxvm"]
+[ext_resource type="Texture2D" uid="uid://blmnrqs2rcstn" path="res://assets/godot_monochrome_light.svg" id="1_n4g2v"]
+[ext_resource type="Texture2D" uid="uid://4dek45kyjmyb" path="res://assets/godot_monochrome_light_2.svg" id="3_4gp4q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndlxt"]
+bg_color = Color(0.5795962, 0.5657938, 0.8264051, 1)
+
+[sub_resource type="Theme" id="Theme_ep5rh"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_ndlxt")
+
+[node name="SplashScreen" type="Control" unique_id=1606166660]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hsxvm")
+
+[node name="Background" type="PanelContainer" parent="." unique_id=1190280473]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ep5rh")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1333662163]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -100.0
+offset_right = 225.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="GodotLogo" type="TextureRect" parent="MarginContainer" unique_id=1645713020]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("1_n4g2v")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1884404404]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -100.0
+offset_right = 225.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="GodotTeeth" type="TextureRect" parent="MarginContainer2" unique_id=1637186331]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("3_4gp4q")
+expand_mode = 5
+stretch_mode = 5
