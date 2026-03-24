@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c8qwjjcygktcd"]
+
+[ext_resource type="Texture2D" uid="uid://covjg6kh63mt8" path="res://assets/icons/close-bold-svgrepo-com-03.svg" id="1_k3n1t"]
+[ext_resource type="Texture2D" uid="uid://b5nubt6q6ah4l" path="res://assets/icons/close-bold-svgrepo-com-01.svg" id="2_c7d44"]
+[ext_resource type="Texture2D" uid="uid://da0hvl504ieb5" path="res://assets/icons/close-bold-svgrepo-com-02.svg" id="3_pboxc"]
+
+[node name="CloseContainer" type="MarginContainer" unique_id=2059083527]
+custom_minimum_size = Vector2(70, 70)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -70.0
+offset_bottom = 70.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="CloseButton" type="TextureButton" parent="." unique_id=1509285366]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("1_k3n1t")
+texture_pressed = ExtResource("1_k3n1t")
+texture_hover = ExtResource("2_c7d44")
+texture_disabled = ExtResource("3_pboxc")
+texture_focused = ExtResource("3_pboxc")
+ignore_texture_size = true
+stretch_mode = 5

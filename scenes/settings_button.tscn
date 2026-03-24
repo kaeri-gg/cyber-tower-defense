@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://k1luxrbn2fxc"]
+
+[ext_resource type="Texture2D" uid="uid://c22rff7knodb3" path="res://assets/icons/settings-svgrepo-com-01.svg" id="1_v456u"]
+[ext_resource type="Texture2D" uid="uid://b6rrqblllj1qs" path="res://assets/icons/settings-svgrepo-com-02.svg" id="2_b4156"]
+[ext_resource type="Texture2D" uid="uid://cifko0n11fc3i" path="res://assets/icons/settings-svgrepo-com-03.svg" id="3_4d7cr"]
+
+[node name="SettingsContainer" type="MarginContainer" unique_id=2059083527]
+custom_minimum_size = Vector2(70, 70)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="SettingsButton" type="TextureButton" parent="." unique_id=1509285366]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("1_v456u")
+texture_pressed = ExtResource("1_v456u")
+texture_hover = ExtResource("2_b4156")
+texture_disabled = ExtResource("3_4d7cr")
+texture_focused = ExtResource("3_4d7cr")
+ignore_texture_size = true
+stretch_mode = 5
