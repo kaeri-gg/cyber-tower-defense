@@ -92,7 +92,6 @@ underline = 1
 
 [node name="ModalManager" parent="." unique_id=1387123506 instance=ExtResource("4_mw6r2")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 
 [node name="SettingsButton" parent="." unique_id=445205108 instance=ExtResource("3_ysvk1")]

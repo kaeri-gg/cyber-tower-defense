@@ -17,9 +17,14 @@ boot_splash/show_image=false
 boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://b8wr0hwoqop4v"
+
 [autoload]
 
 utils="*uid://bsfeki27pyrgy"
+sound_manager="*uid://dli2v7y1atlqn"
 
 [display]
 

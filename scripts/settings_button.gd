@@ -1,0 +1,13 @@
+class_name SettingsButton
+extends Control
+
+signal on_click
+
+@onready var settings_button: TextureButton = %SettingsButton
+
+func _ready() -> void:
+	settings_button.pressed.connect(open_settings)
+	
+func open_settings() -> void:
+	sound_manager.play("Click")
+	on_click.emit()

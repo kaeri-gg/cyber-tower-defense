@@ -1,3 +1,4 @@
+class_name SplashScreen
 extends Control
 
 const GAME_MENU = preload("uid://4ht2ox1qqc7q")

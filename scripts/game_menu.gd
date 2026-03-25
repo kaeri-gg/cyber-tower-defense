@@ -1,14 +1,19 @@
+class_name GameMenu
 extends Control
 
-const MODAL_CONTAINER = preload("uid://ijw6ubii34sy")
+@onready var settings_button: SettingsButton = %SettingsButton
+@onready var modal_manager: ModalManager = %ModalManager
 
-@onready var settings_button: TextureButton = %SettingsButton
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	sound_manager.play("EnterGame")
+	
+	settings_button.on_click.connect(_show_settings)
 
+func start_game() -> void:
+	sound_manager.play("EnterGame")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func show_about_us() -> void:
+	sound_manager.play("Click")
+
+func _show_settings() -> void:
+	modal_manager.open_settings_modal()
