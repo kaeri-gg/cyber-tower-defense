@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://dbd7sj28jdmjd" path="res://theme/modal_theme.tres" id="1_582tx"]
 [ext_resource type="Script" uid="uid://dd8b2soj8keq5" path="res://scripts/modal_manager.gd" id="2_suqfr"]
 [ext_resource type="FontFile" uid="uid://cnqvv2fq4nkmg" path="res://assets/fonts/ShantellSans-ExtraBold.ttf" id="2_v65hy"]
+[ext_resource type="Script" uid="uid://wiwu7rye4fmx" path="res://scenes/settings_control.gd" id="3_qtb06"]
 [ext_resource type="PackedScene" uid="uid://c8qwjjcygktcd" path="res://scenes/close_button.tscn" id="3_suqfr"]
 
 [node name="ModalManager" type="Control" unique_id=1387123506]
@@ -44,6 +45,7 @@ layout_mode = 2
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("3_qtb06")
 
 [node name="Settings" type="GridContainer" parent="MarginContainer/PanelContainer/SettingsControl" unique_id=703205411]
 layout_mode = 1
@@ -113,6 +115,7 @@ popup/item_2/text = "125%"
 popup/item_2/id = 2
 
 [node name="MusicVolumeSlider" type="HSlider" parent="MarginContainer/PanelContainer/SettingsControl/Settings/SettingsDetails/AdjustmentContainer" unique_id=673056205]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 value = 50.0
@@ -122,6 +125,7 @@ ticks_on_borders = true
 ticks_position = 3
 
 [node name="SFXVolumeSlider" type="HSlider" parent="MarginContainer/PanelContainer/SettingsControl/Settings/SettingsDetails/AdjustmentContainer" unique_id=786689803]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 value = 70.0

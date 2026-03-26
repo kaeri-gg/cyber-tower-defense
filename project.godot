@@ -25,6 +25,7 @@ buses/default_bus_layout="uid://b8wr0hwoqop4v"
 
 utils="*uid://bsfeki27pyrgy"
 sound_manager="*uid://dli2v7y1atlqn"
+bg_music="*uid://ba72tpgnbuoda"
 
 [display]
 
