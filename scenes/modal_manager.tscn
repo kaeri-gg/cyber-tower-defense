@@ -124,7 +124,8 @@ tick_count = 10
 ticks_on_borders = true
 ticks_position = 3
 
-[node name="CloseContainer" parent="." unique_id=2059083527 instance=ExtResource("3_suqfr")]
+[node name="CloseButton" parent="." unique_id=2059083527 instance=ExtResource("3_suqfr")]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
 anchors_preset = 0

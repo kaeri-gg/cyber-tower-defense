@@ -2,17 +2,18 @@ class_name ModalManager
 extends Control
 
 @onready var settings: Control = %SettingsControl
-@onready var close_button: TextureButton = %CloseButton
+@onready var close_button: CloseButton = %CloseButton
 
-var modal_views: Dictionary[String, Control] = {
-	"settings": settings,
-}
+var modal_views: Dictionary[String, Control] = {}
 
 func _ready() -> void:
+	modal_views = {
+		"settings": settings,
+	}
+
 	sound_manager.play("EnterGame")
 	
 	close_button.on_click.connect(_close_modal)
-	
 	
 func open_modal(view_name: String) -> void:
 	for view in modal_views.values():
