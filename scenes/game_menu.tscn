@@ -84,7 +84,8 @@ text = "Start Game"
 [node name="LinksContainer" type="MarginContainer" parent="ContentsContainer" unique_id=873313402]
 layout_mode = 2
 
-[node name="LinkButton" type="LinkButton" parent="ContentsContainer/LinksContainer" unique_id=2005270340]
+[node name="AboutLinkButton" type="LinkButton" parent="ContentsContainer/LinksContainer" unique_id=2005270340]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 text = "About"
@@ -100,4 +101,4 @@ unique_name_in_owner = true
 layout_mode = 0
 
 [connection signal="pressed" from="ContentsContainer/ButtonContainer/StartGameButton" to="." method="start_game"]
-[connection signal="pressed" from="ContentsContainer/LinksContainer/LinkButton" to="." method="show_about_us"]
+[connection signal="pressed" from="ContentsContainer/LinksContainer/AboutLinkButton" to="." method="show_about_us"]

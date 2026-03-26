@@ -13,6 +13,7 @@ func start_game() -> void:
 	sound_manager.play("EnterGame")
 
 func show_about_us() -> void:
+	modal_manager.open_about_us_modal()
 	sound_manager.play("Click")
 
 func _show_settings() -> void:

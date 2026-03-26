@@ -46,11 +46,18 @@ visible = false
 layout_mode = 2
 
 [node name="Settings" type="GridContainer" parent="MarginContainer/PanelContainer/SettingsControl" unique_id=703205411]
-layout_mode = 0
-offset_left = 82.0
-offset_top = 159.0
-offset_right = 417.0
-offset_bottom = 340.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.5
+offset_top = -90.5
+offset_right = 167.5
+offset_bottom = 90.5
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/h_separation = 10
@@ -102,7 +109,6 @@ popup/item_0/text = "100%"
 popup/item_0/id = 0
 popup/item_1/text = "115%"
 popup/item_1/id = 1
-popup/item_1/separator = true
 popup/item_2/text = "125%"
 popup/item_2/id = 2
 
@@ -123,6 +129,53 @@ rounded = true
 tick_count = 10
 ticks_on_borders = true
 ticks_position = 3
+
+[node name="AboutTheGameControl" type="Control" parent="MarginContainer/PanelContainer" unique_id=190346835]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="About" type="GridContainer" parent="MarginContainer/PanelContainer/AboutTheGameControl" unique_id=221004420]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -112.5
+offset_right = 175.0
+offset_bottom = 112.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 20
+
+[node name="LabelsContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/AboutTheGameControl/About" unique_id=558617517]
+layout_mode = 2
+theme_override_constants/margin_bottom = 20
+
+[node name="AboutLabel" type="Label" parent="MarginContainer/PanelContainer/AboutTheGameControl/About/LabelsContainer" unique_id=1599243744]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_v65hy")
+theme_override_font_sizes/font_size = 23
+text = "About the game"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="LabelContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/AboutTheGameControl/About" unique_id=1683192745]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Description" type="Label" parent="MarginContainer/PanelContainer/AboutTheGameControl/About/LabelContainer" unique_id=1588838205]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="CloseButton" parent="." unique_id=2059083527 instance=ExtResource("3_suqfr")]
 unique_name_in_owner = true

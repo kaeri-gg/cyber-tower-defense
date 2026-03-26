@@ -102,6 +102,7 @@ offset_top = -40.0
 offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/margin_bottom = 50
 
 [node name="ProgressBar" type="ProgressBar" parent="MarginContainer3" unique_id=1489958507]
 unique_name_in_owner = true
