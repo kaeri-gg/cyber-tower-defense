@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dli2v7y1atlqn"]
 
 [ext_resource type="AudioStream" uid="uid://cp2pvh7oa32i" path="res://assets/audio/click.mp3" id="1_gbdfy"]
-[ext_resource type="Script" uid="uid://chkyuswi06ng" path="res://scripts/sound_manager.gd" id="1_mpi5b"]
+[ext_resource type="Script" uid="uid://chkyuswi06ng" path="res://scripts/managers/sound_manager.gd" id="1_mpi5b"]
 [ext_resource type="AudioStream" uid="uid://etilaxgtc1f5" path="res://assets/audio/wrong-answer.mp3" id="2_v1pt3"]
 [ext_resource type="AudioStream" uid="uid://yt5fwnga1ifr" path="res://assets/audio/correct-answer-1.mp3" id="3_mpi5b"]
 [ext_resource type="AudioStream" uid="uid://d2xp2tsjwjaua" path="res://assets/audio/winning-sound.mp3" id="4_aa63w"]

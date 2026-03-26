@@ -3,8 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bc68rpohsx0ea" path="res://assets/images/godot_monochrome_dark.svg" id="1_qdaa4"]
 [ext_resource type="Theme" uid="uid://deao4c1ege2ao" path="res://theme/main_theme.tres" id="1_vrsc2"]
 [ext_resource type="Script" uid="uid://qbmmulf7ilvg" path="res://scripts/game_menu.gd" id="2_ldg7d"]
-[ext_resource type="PackedScene" uid="uid://k1luxrbn2fxc" path="res://scenes/settings_button.tscn" id="3_ysvk1"]
-[ext_resource type="PackedScene" uid="uid://ijw6ubii34sy" path="res://scenes/modal_manager.tscn" id="4_mw6r2"]
+[ext_resource type="PackedScene" uid="uid://k1luxrbn2fxc" path="res://scenes/components/settings_button.tscn" id="3_ysvk1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cdnys"]
 bg_color = Color(0.8557774, 0.85455686, 0.9922696, 1)
@@ -90,11 +89,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "About"
 underline = 1
-
-[node name="ModalManager" parent="." unique_id=1387123506 instance=ExtResource("4_mw6r2")]
-unique_name_in_owner = true
-visible = false
-layout_mode = 1
 
 [node name="SettingsButton" parent="." unique_id=445205108 instance=ExtResource("3_ysvk1")]
 unique_name_in_owner = true
