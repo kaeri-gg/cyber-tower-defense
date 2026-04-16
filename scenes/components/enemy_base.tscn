@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://pkapuxp7aub1"]
+
+[ext_resource type="Script" uid="uid://biudye57unv4p" path="res://scripts/components/enemy_base.gd" id="1_82gh3"]
+[ext_resource type="Texture2D" uid="uid://dgv0rscbsyeb2" path="res://assets/sprites/Units/Blue Units/Archer/Archer_Idle.png" id="2_mvngr"]
+[ext_resource type="Resource" uid="uid://bhwh1jwkwpkm" path="res://resources/enemy/sniffer_stats.tres" id="2_ywjyo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ywjyo"]
+radius = 19.104973
+
+[node name="EnemyBase" type="CharacterBody2D" unique_id=1840978251]
+script = ExtResource("1_82gh3")
+enemy_stats = ExtResource("2_ywjyo")
+
+[node name="ArcherIdle" type="Sprite2D" parent="." unique_id=817416429]
+position = Vector2(0, -33)
+texture = ExtResource("2_mvngr")
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1544265093]
+position = Vector2(0, -15)
+shape = SubResource("CircleShape2D_ywjyo")

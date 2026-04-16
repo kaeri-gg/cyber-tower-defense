@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
-run/main_scene="uid://qk4cctayieey"
+config/name="Cyber Tower Defense"
+run/main_scene="uid://4ht2ox1qqc7q"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/show_image=false
 boot_splash/use_filter=false

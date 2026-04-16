@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyResource" format=3 uid="uid://dc6kse781wt5l"]
+
+[ext_resource type="Script" uid="uid://3qieyqicwcd5" path="res://scripts/resources/enemy_resource.gd" id="1_xh0pv"]
+
+[resource]
+script = ExtResource("1_xh0pv")
+attacker = "Trojan"
+hp = 200
+speed = 70
+armor = 40
+crypto_resistance = 10
+bounty = 15
+lives_cost = 1
+threat_level = 2
+metadata/_custom_type_script = "uid://3qieyqicwcd5"

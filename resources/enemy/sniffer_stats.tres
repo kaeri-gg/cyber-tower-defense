@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyResource" format=3 uid="uid://bhwh1jwkwpkm"]
+
+[ext_resource type="Script" uid="uid://3qieyqicwcd5" path="res://scripts/resources/enemy_resource.gd" id="1_mbmtr"]
+
+[resource]
+script = ExtResource("1_mbmtr")
+attacker = 2
+hp = 80
+speed = 110
+armor = 10
+bounty = 5
+lives_cost = 1
+threat_level = 1
+metadata/_custom_type_script = "uid://3qieyqicwcd5"

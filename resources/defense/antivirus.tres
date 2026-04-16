@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DefenseResource" format=3 uid="uid://dlka1ec5a0kvv"]
+
+[ext_resource type="Script" uid="uid://gdn4kebmbkad" path="res://scripts/components/defense_base.gd" id="1_yow5w"]
+
+[resource]
+script = ExtResource("1_yow5w")
+tower_name = 1
+tower_type = 1
+base_cost = 70
+target_type = 1
+metadata/_custom_type_script = "uid://gdn4kebmbkad"
