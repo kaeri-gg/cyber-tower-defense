@@ -4,7 +4,6 @@
 
 [resource]
 script = ExtResource("1_mbmtr")
-attacker = 2
 hp = 80
 speed = 110
 armor = 10

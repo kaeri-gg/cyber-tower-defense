@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_hwxef")
-attacker = 1
+enemy = 1
 hp = 35
 speed = 70
 bounty = 2

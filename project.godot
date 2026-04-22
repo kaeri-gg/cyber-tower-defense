@@ -27,6 +27,7 @@ utils="*uid://bsfeki27pyrgy"
 sound_manager="*uid://dli2v7y1atlqn"
 bg_music="*uid://ba72tpgnbuoda"
 ui_manager="*uid://bbb0232q636ie"
+game_state="*uid://dw6ahd5j1lhsf"
 
 [display]
 

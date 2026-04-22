@@ -4,5 +4,8 @@
 
 [resource]
 script = ExtResource("1_fodx1")
-base_cost = 70
+base_cost = 50
+damage = 30
+range = 90.0
+fire_rate = 1.5
 metadata/_custom_type_script = "uid://gdn4kebmbkad"
