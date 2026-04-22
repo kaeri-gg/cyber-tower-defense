@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c284dlrklulka"]
+
+[ext_resource type="Script" uid="uid://dtgq7rk4jfn6t" path="res://scripts/components/defense_tower.gd" id="1_h0ggt"]
+
+[node name="DefenseTower" type="Node2D" unique_id=1474468951]
+script = ExtResource("1_h0ggt")

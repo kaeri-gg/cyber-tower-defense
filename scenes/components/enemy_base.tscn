@@ -11,7 +11,7 @@ radius = 19.104973
 script = ExtResource("1_82gh3")
 enemy_stats = ExtResource("2_ywjyo")
 
-[node name="ArcherIdle" type="Sprite2D" parent="." unique_id=817416429]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=817416429]
 position = Vector2(0, -33)
 texture = ExtResource("2_mvngr")
 hframes = 6
