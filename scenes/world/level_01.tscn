@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bbosdl4p301n0"]
 
 [ext_resource type="Script" uid="uid://js66y424iqr6" path="res://scripts/components/level_01.gd" id="1_6jip1"]
+[ext_resource type="Script" path="res://scripts/components/tower_spot.gd" id="2_spot"]
+[ext_resource type="Texture2D" uid="uid://dn4kmi22yl488" path="res://assets/backgrounds/bg_lab.jpg" id="3_bg"]
+[ext_resource type="Theme" uid="uid://deao4c1ege2ao" path="res://theme/main_theme.tres" id="4_theme"]
 
 [sub_resource type="Curve2D" id="Curve2D_2tlku"]
 _data = {
@@ -11,6 +14,191 @@ point_count = 6
 [node name="Level_01" type="Node2D" unique_id=872786905]
 script = ExtResource("1_6jip1")
 
+[node name="BgLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="BgRect" type="TextureRect" parent="BgLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+texture = ExtResource("3_bg")
+stretch_mode = 6
+
 [node name="Path2D" type="Path2D" parent="." unique_id=1783225961]
 unique_name_in_owner = true
 curve = SubResource("Curve2D_2tlku")
+
+[node name="Towers" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="TowerSpots" type="Node2D" parent="."]
+
+[node name="Spot1" type="Area2D" parent="TowerSpots"]
+position = Vector2(100, 150)
+script = ExtResource("2_spot")
+
+[node name="Spot2" type="Area2D" parent="TowerSpots"]
+position = Vector2(210, 150)
+script = ExtResource("2_spot")
+
+[node name="Spot3" type="Area2D" parent="TowerSpots"]
+position = Vector2(165, 340)
+script = ExtResource("2_spot")
+
+[node name="Spot4" type="Area2D" parent="TowerSpots"]
+position = Vector2(270, 330)
+script = ExtResource("2_spot")
+
+[node name="Spot5" type="Area2D" parent="TowerSpots"]
+position = Vector2(480, 300)
+script = ExtResource("2_spot")
+
+[node name="Spot6" type="Area2D" parent="TowerSpots"]
+position = Vector2(620, 300)
+script = ExtResource("2_spot")
+
+[node name="Spot7" type="Area2D" parent="TowerSpots"]
+position = Vector2(760, 300)
+script = ExtResource("2_spot")
+
+[node name="Spot8" type="Area2D" parent="TowerSpots"]
+position = Vector2(910, 300)
+script = ExtResource("2_spot")
+
+[node name="Spot9" type="Area2D" parent="TowerSpots"]
+position = Vector2(540, 525)
+script = ExtResource("2_spot")
+
+[node name="Spot10" type="Area2D" parent="TowerSpots"]
+position = Vector2(690, 525)
+script = ExtResource("2_spot")
+
+[node name="Spot11" type="Area2D" parent="TowerSpots"]
+position = Vector2(840, 525)
+script = ExtResource("2_spot")
+
+[node name="Spot12" type="Area2D" parent="TowerSpots"]
+position = Vector2(1160, 180)
+script = ExtResource("2_spot")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="TopBar" type="ColorRect" parent="HUD"]
+offset_right = 1280.0
+offset_bottom = 60.0
+color = Color(0.04, 0.04, 0.12, 0.88)
+
+[node name="GoldLabel" type="Label" parent="HUD/TopBar"]
+unique_name_in_owner = true
+theme = ExtResource("4_theme")
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 280.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(1.0, 0.87, 0.3, 1.0)
+theme_override_font_sizes/font_size = 22
+text = "Gold: 100"
+
+[node name="LivesLabel" type="Label" parent="HUD/TopBar"]
+unique_name_in_owner = true
+theme = ExtResource("4_theme")
+offset_left = 440.0
+offset_top = 10.0
+offset_right = 700.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.95, 0.35, 0.35, 1.0)
+theme_override_font_sizes/font_size = 22
+text = "Lives: 10"
+
+[node name="WaveLabel" type="Label" parent="HUD/TopBar"]
+unique_name_in_owner = true
+theme = ExtResource("4_theme")
+offset_left = 810.0
+offset_top = 10.0
+offset_right = 1100.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.6, 0.95, 0.6, 1.0)
+theme_override_font_sizes/font_size = 22
+text = "Wave: 0 / 5"
+
+[node name="ShopBar" type="ColorRect" parent="HUD"]
+offset_top = 640.0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.04, 0.04, 0.12, 0.92)
+
+[node name="ShopTitle" type="Label" parent="HUD/ShopBar"]
+theme = ExtResource("4_theme")
+offset_left = 14.0
+offset_top = 10.0
+offset_right = 160.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 16
+text = "Towers:"
+
+[node name="FirewallBtn" type="Button" parent="HUD/ShopBar"]
+unique_name_in_owner = true
+theme = ExtResource("4_theme")
+offset_left = 170.0
+offset_top = 6.0
+offset_right = 370.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 15
+text = "Firewall  (50g)"
+
+[node name="AntivirusBtn" type="Button" parent="HUD/ShopBar"]
+unique_name_in_owner = true
+theme = ExtResource("4_theme")
+offset_left = 390.0
+offset_top = 6.0
+offset_right = 600.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 15
+text = "Antivirus  (70g)"
+
+[node name="SelectedLabel" type="Label" parent="HUD/ShopBar"]
+unique_name_in_owner = true
+theme = ExtResource("4_theme")
+offset_left = 620.0
+offset_top = 10.0
+offset_right = 1260.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.8, 0.85, 1.0, 1.0)
+theme_override_font_sizes/font_size = 15
+text = "No tower selected — pick one above"
+
+[node name="GameOverOverlay" type="ColorRect" parent="HUD"]
+unique_name_in_owner = true
+visible = false
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.0, 0.0, 0.0, 0.78)
+
+[node name="GameOverLabel" type="Label" parent="HUD/GameOverOverlay"]
+unique_name_in_owner = true
+theme = ExtResource("4_theme")
+offset_left = 0.0
+offset_top = 260.0
+offset_right = 1280.0
+offset_bottom = 380.0
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 72
+horizontal_alignment = 1
+text = "GAME OVER"
+
+[node name="RestartBtn" type="Button" parent="HUD/GameOverOverlay"]
+unique_name_in_owner = true
+theme = ExtResource("4_theme")
+offset_left = 530.0
+offset_top = 400.0
+offset_right = 750.0
+offset_bottom = 460.0
+theme_override_font_sizes/font_size = 20
+text = "Play Again"
+
+[connection signal="pressed" from="HUD/ShopBar/FirewallBtn" to="." method="select_firewall"]
+[connection signal="pressed" from="HUD/ShopBar/AntivirusBtn" to="." method="select_antivirus"]
+[connection signal="pressed" from="HUD/GameOverOverlay/RestartBtn" to="." method="_on_restart_pressed"]

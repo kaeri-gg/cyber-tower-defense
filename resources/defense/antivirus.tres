@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="DefenseResource" format=3 uid="uid://dlka1ec5a0kvv"]
 
 [ext_resource type="Script" uid="uid://gdn4kebmbkad" path="res://scripts/components/defense_base.gd" id="1_yow5w"]
+[ext_resource type="Texture2D" uid="uid://gvaw8xpvrkfd" path="res://assets/sprites/Buildings/Blue Buildings/Archery.png" id="2_antivirus"]
 
 [resource]
 script = ExtResource("1_yow5w")
@@ -10,5 +11,7 @@ target_type = 1
 damage = 15
 range = 220.0
 fire_rate = 2.0
+base_cost = 70
 projectile_color = Color(0.3919424, 0.9593671, 0.4598924, 1)
+sprite_texture = ExtResource("2_antivirus")
 metadata/_custom_type_script = "uid://gdn4kebmbkad"

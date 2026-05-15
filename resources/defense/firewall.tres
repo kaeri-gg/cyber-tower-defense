@@ -1,11 +1,15 @@
 [gd_resource type="Resource" script_class="DefenseResource" format=3 uid="uid://be6p2vv1tsji3"]
 
 [ext_resource type="Script" uid="uid://gdn4kebmbkad" path="res://scripts/components/defense_base.gd" id="1_fodx1"]
+[ext_resource type="Texture2D" uid="uid://d1jrh38eyspbu" path="res://assets/sprites/Buildings/Blue Buildings/Tower.png" id="2_firewall"]
 
 [resource]
 script = ExtResource("1_fodx1")
-base_cost = 50
+tower_name = 0
+tower_type = 0
 damage = 30
 range = 90.0
 fire_rate = 1.5
+base_cost = 50
+sprite_texture = ExtResource("2_firewall")
 metadata/_custom_type_script = "uid://gdn4kebmbkad"

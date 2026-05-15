@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="EnemyResource" format=3 uid="uid://ch2que1junc4p"]
 
 [ext_resource type="Script" uid="uid://3qieyqicwcd5" path="res://scripts/resources/enemy_resource.gd" id="1_hwxef"]
+[ext_resource type="Texture2D" uid="uid://cpbqm1qwbv1cv" path="res://assets/sprites/Units/Blue Units/Pawn/Pawn_Run.png" id="2_ddos"]
 
 [resource]
 script = ExtResource("1_hwxef")
@@ -9,4 +10,6 @@ hp = 35
 speed = 70
 bounty = 2
 lives_cost = 1
+sprite_texture = ExtResource("2_ddos")
+sprite_hframes = 6
 metadata/_custom_type_script = "uid://3qieyqicwcd5"

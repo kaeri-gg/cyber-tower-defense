@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="EnemyResource" format=3 uid="uid://bhwh1jwkwpkm"]
 
 [ext_resource type="Script" uid="uid://3qieyqicwcd5" path="res://scripts/resources/enemy_resource.gd" id="1_mbmtr"]
+[ext_resource type="Texture2D" uid="uid://dq1ptjsbleikk" path="res://assets/sprites/Units/Blue Units/Archer/Archer_Run.png" id="2_sniffer"]
 
 [resource]
 script = ExtResource("1_mbmtr")
@@ -10,4 +11,6 @@ armor = 10
 bounty = 5
 lives_cost = 1
 threat_level = 1
+sprite_texture = ExtResource("2_sniffer")
+sprite_hframes = 6
 metadata/_custom_type_script = "uid://3qieyqicwcd5"
