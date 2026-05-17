@@ -7,9 +7,7 @@
 script = ExtResource("1_hwxef")
 enemy = 1
 hp = 35
-speed = 70
 bounty = 2
-lives_cost = 1
 sprite_texture = ExtResource("2_ddos")
 sprite_hframes = 6
 metadata/_custom_type_script = "uid://3qieyqicwcd5"

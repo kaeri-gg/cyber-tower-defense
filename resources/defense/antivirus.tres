@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="DefenseResource" format=3 uid="uid://dlka1ec5a0kvv"]
 
-[ext_resource type="Script" uid="uid://gdn4kebmbkad" path="res://scripts/components/defense_base.gd" id="1_yow5w"]
+[ext_resource type="Script" uid="uid://gdn4kebmbkad" path="res://scripts/resources/defense_base.gd" id="1_yow5w"]
 [ext_resource type="Texture2D" uid="uid://gvaw8xpvrkfd" path="res://assets/sprites/Buildings/Blue Buildings/Archery.png" id="2_antivirus"]
 
 [resource]

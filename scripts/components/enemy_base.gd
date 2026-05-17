@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 		_cleanup()
 
 func take_damage(amount: int) -> void:
-	var effective : int = max(1, amount - enemy_stats.armor)
+	var effective : int = max(1, amount * (100 - enemy_stats.armor) / 100)
 	current_hp -= effective
 	modulate = Color(1, 0.5, 0.5)
 	create_tween().tween_property(self, "modulate", Color.WHITE, 0.15)
