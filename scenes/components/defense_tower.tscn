@@ -1,6 +1,42 @@
-[gd_scene format=3 uid="uid://c284dlrklulka"]
+[gd_scene load_steps=3 format=3 uid="uid://c284dlrklulka"]
 
 [ext_resource type="Script" uid="uid://dtgq7rk4jfn6t" path="res://scripts/components/defense_tower.gd" id="1_h0ggt"]
 
-[node name="DefenseTower" type="Node2D" unique_id=1474468951]
+[sub_resource type="CircleShape2D" id="CircleShape2D_range"]
+radius = 140.0
+
+[node name="DefenseTower" type="Node2D"]
 script = ExtResource("1_h0ggt")
+
+[node name="Visual" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="Visual"]
+color = Color(0.4, 0.9, 1, 1)
+polygon = PackedVector2Array(0, -20, 19, -6, 12, 16, -12, 16, -19, -6)
+
+[node name="Label" type="Label" parent="Visual"]
+offset_left = -28.0
+offset_top = -7.0
+offset_right = 28.0
+offset_bottom = 7.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "Tower"
+
+[node name="RangeArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 1
+monitoring = true
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea"]
+shape = SubResource("CircleShape2D_range")
+
+[node name="TickTimer" type="Timer" parent="."]
+wait_time = 1.0
+autostart = false
+one_shot = false

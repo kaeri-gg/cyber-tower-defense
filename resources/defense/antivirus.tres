@@ -1,14 +1,16 @@
 [gd_resource type="Resource" script_class="DefenseResource" format=3 uid="uid://dlka1ec5a0kvv"]
 
-[ext_resource type="Script" uid="uid://gdn4kebmbkad" path="res://scripts/components/defense_base.gd" id="1_yow5w"]
+[ext_resource type="Script" uid="uid://gdn4kebmbkad" path="res://scripts/resources/defense_base.gd" id="1"]
 
 [resource]
-script = ExtResource("1_yow5w")
+script = ExtResource("1")
 tower_name = 1
-tower_type = 1
-target_type = 1
-damage = 15
-range = 220.0
-fire_rate = 2.0
-projectile_color = Color(0.3919424, 0.9593671, 0.4598924, 1)
-metadata/_custom_type_script = "uid://gdn4kebmbkad"
+display_name = "Antivirus"
+description = "Defeats Virus, Spyware and Trojan."
+defeats = Array[int]([2, 3, 4])
+base_cost = 70
+damage = 20
+range = 150.0
+fire_rate = 1.2
+tower_color = Color(0.3, 0.85, 0.4, 1)
+pulse_color = Color(0.7, 1, 0.7, 1)

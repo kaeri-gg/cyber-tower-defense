@@ -1,16 +1,282 @@
 [gd_scene format=3 uid="uid://bbosdl4p301n0"]
 
-[ext_resource type="Script" uid="uid://js66y424iqr6" path="res://scripts/components/level_01.gd" id="1_6jip1"]
+[ext_resource type="Script" uid="uid://js66y424iqr6" path="res://scripts/components/level_01.gd" id="1_level"]
+[ext_resource type="Script" uid="uid://dh5j1jslk8wj3" path="res://scripts/components/tower_spot.gd" id="2_spot"]
+[ext_resource type="Theme" uid="uid://deao4c1ege2ao" path="res://theme/main_theme.tres" id="3_theme"]
+[ext_resource type="PackedScene" path="res://scenes/components/defense_picker.tscn" id="4_picker"]
 
-[sub_resource type="Curve2D" id="Curve2D_2tlku"]
+[sub_resource type="Curve2D" id="Curve2D_left"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 5, 246, 0, 0, 0, 0, 310, 244, 0, 0, 0, 0, 353, 414, 0, 0, 0, 0, 811, 415, 0, 0, 0, 0, 1085, 409, 0, 0, 0, 0, 1079, 273)
+"points": PackedVector2Array(0, 0, 0, 0, 40, 420, 0, 0, 0, 0, 240, 420, 0, 0, 0, 0, 440, 320, 0, 0, 0, 0, 640, 220)
 }
-point_count = 6
+point_count = 4
 
-[node name="Level_01" type="Node2D" unique_id=872786905]
-script = ExtResource("1_6jip1")
+[sub_resource type="Curve2D" id="Curve2D_right"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1240, 420, 0, 0, 0, 0, 1040, 420, 0, 0, 0, 0, 840, 320, 0, 0, 0, 0, 640, 220)
+}
+point_count = 4
 
-[node name="Path2D" type="Path2D" parent="." unique_id=1783225961]
+[sub_resource type="Curve2D" id="Curve2D_bottom"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 640, 620, 0, 0, 0, 0, 640, 460, 0, 0, 0, 0, 640, 220)
+}
+point_count = 3
+
+[node name="Level_01" type="Node2D" unique_id=562459489]
+script = ExtResource("1_level")
+
+[node name="BgColor" type="ColorRect" parent="." unique_id=251025037]
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.08, 0.1, 0.16, 1)
+
+[node name="Paths" type="Node2D" parent="." unique_id=875486976]
+
+[node name="PathLeft" type="Path2D" parent="Paths" unique_id=1606746435]
 unique_name_in_owner = true
-curve = SubResource("Curve2D_2tlku")
+curve = SubResource("Curve2D_left")
+
+[node name="Line2D" type="Line2D" parent="Paths/PathLeft" unique_id=1616168686]
+points = PackedVector2Array(40, 420, 240, 420, 440, 320, 640, 220)
+width = 6.0
+default_color = Color(0.5, 0.7, 0.95, 0.5)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="PathRight" type="Path2D" parent="Paths" unique_id=1901173703]
+unique_name_in_owner = true
+curve = SubResource("Curve2D_right")
+
+[node name="Line2D" type="Line2D" parent="Paths/PathRight" unique_id=1537593743]
+points = PackedVector2Array(1240, 420, 1040, 420, 840, 320, 640, 220)
+width = 6.0
+default_color = Color(0.5, 0.7, 0.95, 0.5)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="PathBottom" type="Path2D" parent="Paths" unique_id=576226284]
+unique_name_in_owner = true
+curve = SubResource("Curve2D_bottom")
+
+[node name="Line2D" type="Line2D" parent="Paths/PathBottom" unique_id=965543922]
+points = PackedVector2Array(640, 620, 640, 460, 640, 220)
+width = 6.0
+default_color = Color(0.5, 0.7, 0.95, 0.5)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="ServerCore" type="Node2D" parent="." unique_id=209722814]
+unique_name_in_owner = true
+position = Vector2(640, 180)
+
+[node name="Polygon2D" type="Polygon2D" parent="ServerCore" unique_id=1865215378]
+color = Color(0.2, 0.85, 0.55, 1)
+polygon = PackedVector2Array(-30, -30, 30, -30, 30, 30, -30, 30)
+
+[node name="Label" type="Label" parent="ServerCore" unique_id=157670093]
+offset_left = -60.0
+offset_top = -10.0
+offset_right = 60.0
+offset_bottom = 10.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 14
+text = "SERVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Towers" type="Node2D" parent="." unique_id=168728850]
+unique_name_in_owner = true
+
+[node name="TowerSpots" type="Node2D" parent="." unique_id=356480734]
+
+[node name="RouterLeft" type="Area2D" parent="TowerSpots" unique_id=754270642]
+position = Vector2(37, 421)
+script = ExtResource("2_spot")
+is_router = true
+
+[node name="LeftA" type="Area2D" parent="TowerSpots" unique_id=1311178482]
+position = Vector2(200, 360)
+script = ExtResource("2_spot")
+
+[node name="LeftB" type="Area2D" parent="TowerSpots" unique_id=383877320]
+position = Vector2(367, 416)
+script = ExtResource("2_spot")
+
+[node name="LeftC" type="Area2D" parent="TowerSpots" unique_id=1232607075]
+position = Vector2(385, 277)
+script = ExtResource("2_spot")
+
+[node name="LeftD" type="Area2D" parent="TowerSpots" unique_id=2146371786]
+position = Vector2(540, 208)
+script = ExtResource("2_spot")
+
+[node name="RouterRight" type="Area2D" parent="TowerSpots" unique_id=627925254]
+position = Vector2(1241, 420)
+script = ExtResource("2_spot")
+is_router = true
+
+[node name="RightA" type="Area2D" parent="TowerSpots" unique_id=1224562889]
+position = Vector2(1035, 350)
+script = ExtResource("2_spot")
+
+[node name="RightB" type="Area2D" parent="TowerSpots" unique_id=1228726864]
+position = Vector2(898, 433)
+script = ExtResource("2_spot")
+
+[node name="RightC" type="Area2D" parent="TowerSpots" unique_id=373402480]
+position = Vector2(900, 281)
+script = ExtResource("2_spot")
+
+[node name="RightD" type="Area2D" parent="TowerSpots" unique_id=1591142707]
+position = Vector2(773, 225)
+script = ExtResource("2_spot")
+
+[node name="RouterBottom" type="Area2D" parent="TowerSpots" unique_id=1894237534]
+position = Vector2(641, 619)
+script = ExtResource("2_spot")
+is_router = true
+
+[node name="BottomA" type="Area2D" parent="TowerSpots" unique_id=920546902]
+position = Vector2(560, 500)
+script = ExtResource("2_spot")
+
+[node name="BottomB" type="Area2D" parent="TowerSpots" unique_id=199206006]
+position = Vector2(720, 500)
+script = ExtResource("2_spot")
+
+[node name="BottomC" type="Area2D" parent="TowerSpots" unique_id=463470447]
+position = Vector2(509, 349)
+script = ExtResource("2_spot")
+
+[node name="BottomD" type="Area2D" parent="TowerSpots" unique_id=466768420]
+position = Vector2(765, 362)
+script = ExtResource("2_spot")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1838790387]
+
+[node name="TopBar" type="ColorRect" parent="HUD" unique_id=1941989135]
+offset_right = 1280.0
+offset_bottom = 60.0
+color = Color(0.04, 0.04, 0.12, 0.88)
+
+[node name="GoldLabel" type="Label" parent="HUD/TopBar" unique_id=1739648256]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 280.0
+offset_bottom = 54.0
+theme = ExtResource("3_theme")
+theme_override_colors/font_color = Color(1, 0.87, 0.3, 1)
+theme_override_font_sizes/font_size = 22
+text = "Money: 200"
+
+[node name="WaveLabel" type="Label" parent="HUD/TopBar" unique_id=165496587]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 290.0
+offset_top = 10.0
+offset_right = 560.0
+offset_bottom = 54.0
+theme = ExtResource("3_theme")
+theme_override_colors/font_color = Color(0.6, 0.95, 0.6, 1)
+theme_override_font_sizes/font_size = 22
+text = "Wave: 0 / 5"
+
+[node name="CooldownLabel" type="Label" parent="HUD/TopBar" unique_id=331607622]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 540.0
+offset_top = 10.0
+offset_right = 740.0
+offset_bottom = 54.0
+theme = ExtResource("3_theme")
+theme_override_colors/font_color = Color(0.85, 0.85, 1, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+
+[node name="LivesLabel" type="Label" parent="HUD/TopBar" unique_id=559010950]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 10.0
+offset_right = 1260.0
+offset_bottom = 54.0
+theme = ExtResource("3_theme")
+theme_override_colors/font_color = Color(0.95, 0.35, 0.35, 1)
+theme_override_font_sizes/font_size = 22
+text = "Server HP: 20"
+horizontal_alignment = 2
+
+[node name="ShopBar" type="ColorRect" parent="HUD" unique_id=1784244016]
+offset_top = 640.0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.04, 0.04, 0.12, 0.92)
+
+[node name="SelectedLabel" type="Label" parent="HUD/ShopBar" unique_id=776503477]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 14.0
+offset_top = 10.0
+offset_right = 1060.0
+offset_bottom = 70.0
+theme = ExtResource("3_theme")
+theme_override_colors/font_color = Color(0.8, 0.85, 1, 1)
+theme_override_font_sizes/font_size = 15
+text = "Click a tower spot to choose a defense.  Router spots (orange) accept only Firewall."
+
+[node name="StartBtn" type="Button" parent="HUD/ShopBar" unique_id=628045584]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1080.0
+offset_top = 14.0
+offset_right = 1260.0
+offset_bottom = 66.0
+theme = ExtResource("3_theme")
+theme_override_font_sizes/font_size = 18
+text = "Start"
+
+[node name="DefensePicker" parent="HUD" unique_id=813256290 instance=ExtResource("4_picker")]
+unique_name_in_owner = true
+
+[node name="GameOverOverlay" type="ColorRect" parent="HUD" unique_id=447443804]
+unique_name_in_owner = true
+visible = false
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.78)
+
+[node name="GameOverLabel" type="Label" parent="HUD/GameOverOverlay" unique_id=455583665]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 220.0
+offset_right = 1280.0
+offset_bottom = 420.0
+theme = ExtResource("3_theme")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartBtn" type="Button" parent="HUD/GameOverOverlay" unique_id=866749403]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 530.0
+offset_top = 400.0
+offset_right = 750.0
+offset_bottom = 460.0
+theme = ExtResource("3_theme")
+theme_override_font_sizes/font_size = 20
+text = "Play Again"
+
+[connection signal="pressed" from="HUD/ShopBar/StartBtn" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="HUD/GameOverOverlay/RestartBtn" to="." method="_on_restart_pressed"]

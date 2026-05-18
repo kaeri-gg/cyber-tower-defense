@@ -1,21 +1,40 @@
-[gd_scene format=3 uid="uid://pkapuxp7aub1"]
+[gd_scene load_steps=4 format=3 uid="uid://pkapuxp7aub1"]
 
 [ext_resource type="Script" uid="uid://biudye57unv4p" path="res://scripts/components/enemy_base.gd" id="1_82gh3"]
-[ext_resource type="Texture2D" uid="uid://dgv0rscbsyeb2" path="res://assets/sprites/Units/Blue Units/Archer/Archer_Idle.png" id="2_mvngr"]
 [ext_resource type="Resource" uid="uid://bhwh1jwkwpkm" path="res://resources/enemy/sniffer_stats.tres" id="2_ywjyo"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ywjyo"]
-radius = 19.104973
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_box"]
+size = Vector2(28, 28)
 
-[node name="EnemyBase" type="CharacterBody2D" unique_id=1840978251]
+[node name="EnemyBase" type="CharacterBody2D"]
 script = ExtResource("1_82gh3")
 enemy_stats = ExtResource("2_ywjyo")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=817416429]
-position = Vector2(0, -33)
-texture = ExtResource("2_mvngr")
-hframes = 6
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.9, 0.3, 0.3, 1)
+polygon = PackedVector2Array(-14, -14, 14, -14, 14, 14, -14, 14)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1544265093]
-position = Vector2(0, -15)
-shape = SubResource("CircleShape2D_ywjyo")
+[node name="Label" type="Label" parent="."]
+offset_left = -28.0
+offset_top = -8.0
+offset_right = 28.0
+offset_bottom = 8.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "Enemy"
+
+[node name="HPBar" type="ProgressBar" parent="."]
+offset_left = -16.0
+offset_top = -24.0
+offset_right = 16.0
+offset_bottom = -18.0
+max_value = 100.0
+value = 100.0
+show_percentage = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_box")

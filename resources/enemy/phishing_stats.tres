@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="EnemyResource" format=3 uid="uid://bhwh1jwkwpkm"]
+[gd_resource type="Resource" script_class="EnemyResource" format=3]
 
 [ext_resource type="Script" uid="uid://3qieyqicwcd5" path="res://scripts/resources/enemy_resource.gd" id="1"]
 
 [resource]
 script = ExtResource("1")
-enemy = 0
+enemy = 5
 hp = 100
-speed = 100
+speed = 140
 armor = 0
 lives_cost = 1
 threat_level = 0
-ability = 0
-display_name = "Sniffer"
+ability = 5
+display_name = "Phishing"

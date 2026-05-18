@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="EnemyResource" format=3 uid="uid://ch2que1junc4p"]
+[gd_resource type="Resource" script_class="EnemyResource" format=3]
 
 [ext_resource type="Script" uid="uid://3qieyqicwcd5" path="res://scripts/resources/enemy_resource.gd" id="1"]
 
 [resource]
 script = ExtResource("1")
-enemy = 1
-hp = 300
-speed = 50
+enemy = 6
+hp = 400
+speed = 30
 armor = 0
 lives_cost = 1
-threat_level = 1
-ability = 1
-display_name = "DDOS"
+threat_level = 2
+ability = 6
+display_name = "Ransomware"

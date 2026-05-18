@@ -6,31 +6,37 @@ extends Resource
 @export var speed: int = 70
 @export var armor: int = 0
 @export var crypto_resistance: int = 0
-@export var bounty: int = 5
 @export var lives_cost: int = 1
 @export var threat_level: threat_levels
-@export var sprite_texture: Texture2D
-@export var sprite_hframes: int = 1
+@export var ability: abilities
+@export var display_name: String = ""
 
-# speed slow: 40; medium: 70; fast: 110
-# threat level: low: 1, medium: 2, boss: 3
+# speed scale: VerySlow=30, Slow=50, Medium=70, Fast=100, VeryFast=140
+# hp scale: Low=100, Medium=200, High=300, Huge=400
 
 enum enemy_types {
-	SNIFFER, 
-	DDOS, 
+	SNIFFER,
+	DDOS,
 	TROJAN,
 	SPYWARE,
-	VIRUS, 
-	PHISHING, 
+	VIRUS,
+	PHISHING,
 	RANSOMWARE
 }
 
 enum threat_levels {
 	LOW,
-	MEDIUM, 
+	MEDIUM,
 	HIGH
 }
 
-func find_appearance() -> void: 
-	pass
-	
+# Flavor only for now — shown in tooltips, no gameplay effect.
+enum abilities {
+	STEALTH,
+	RESISTANCE,
+	PAYLOAD,
+	DATA_LEAK,
+	CONTAGION,
+	SWARM,
+	TANK
+}
