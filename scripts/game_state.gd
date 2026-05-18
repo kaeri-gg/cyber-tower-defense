@@ -5,14 +5,14 @@ signal lives_changed(new_value: int)
 signal wave_changed(new_value: int)
 signal game_over(won: bool)
 
-var gold: int = 100
-var lives: int = 10
+var gold: int = 0
+var lives: int = 0
 var current_wave: int = 0
 var is_game_over: bool = false
 
 func reset() -> void:
-	gold = 100
-	lives = 10
+	gold = 1000
+	lives = 20
 	current_wave = 0
 	is_game_over = false
 	gold_changed.emit(gold)
