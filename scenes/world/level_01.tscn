@@ -10,21 +10,21 @@
 
 [sub_resource type="Curve2D" id="Curve2D_left"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 40, 420, 0, 0, 0, 0, 240, 420, 0, 0, 0, 0, 440, 320, 0, 0, 0, 0, 640, 220)
+"points": PackedVector2Array(0, 0, 0, 0, 40, 420, 0, 0, 0, 0, 240, 420, 0, 0, 0, 0, 400, 220, 0, 0, 0, 0, 640, 220)
 }
 point_count = 4
 
 [sub_resource type="Curve2D" id="Curve2D_right"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1240, 420, 0, 0, 0, 0, 1040, 420, 0, 0, 0, 0, 840, 320, 0, 0, 0, 0, 640, 220)
+"points": PackedVector2Array(0, 0, 0, 0, 1240, 420, 0, 0, 0, 0, 1040, 420, 0, 0, 0, 0, 888, 222, 0, 0, 0, 0, 640, 220)
 }
 point_count = 4
 
 [sub_resource type="Curve2D" id="Curve2D_bottom"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 640, 620, 0, 0, 0, 0, 640, 460, 0, 0, 0, 0, 640, 220)
+"points": PackedVector2Array(0, 0, 0, 0, 650, 619, 0, 0, 0, 0, 527, 421, 0, 0, 0, 0, 759, 421, 0, 0, 0, 0, 640, 220)
 }
-point_count = 3
+point_count = 4
 
 [node name="Level_01" type="Node2D" unique_id=562459489]
 script = ExtResource("1_level")
@@ -44,7 +44,7 @@ unique_name_in_owner = true
 curve = SubResource("Curve2D_left")
 
 [node name="Line2D" type="Line2D" parent="Paths/PathLeft" unique_id=1616168686]
-points = PackedVector2Array(40, 420, 240, 420, 440, 320, 640, 220)
+points = PackedVector2Array(40, 420, 240, 420, 398, 219, 640, 220)
 width = 6.0
 default_color = Color(0.5, 0.7, 0.95, 0.5)
 joint_mode = 2
@@ -56,7 +56,7 @@ unique_name_in_owner = true
 curve = SubResource("Curve2D_right")
 
 [node name="Line2D" type="Line2D" parent="Paths/PathRight" unique_id=1537593743]
-points = PackedVector2Array(1240, 420, 1040, 420, 840, 320, 640, 220)
+points = PackedVector2Array(1240, 420, 1040, 420, 889, 222, 640, 220)
 width = 6.0
 default_color = Color(0.5, 0.7, 0.95, 0.5)
 joint_mode = 2
@@ -68,7 +68,9 @@ unique_name_in_owner = true
 curve = SubResource("Curve2D_bottom")
 
 [node name="Line2D" type="Line2D" parent="Paths/PathBottom" unique_id=965543922]
-points = PackedVector2Array(640, 620, 640, 460, 640, 220)
+position = Vector2(107.66669, -0.5194092)
+scale = Vector2(0.8333333, 1.0024272)
+points = PackedVector2Array(652, 623.0072, 502, 422, 781.60004, 421, 640, 220)
 width = 6.0
 default_color = Color(0.5, 0.7, 0.95, 0.5)
 joint_mode = 2
@@ -112,19 +114,19 @@ script = ExtResource("2_spot")
 is_router = true
 
 [node name="LeftA" type="Area2D" parent="TowerSpots" unique_id=1311178482]
-position = Vector2(200, 360)
+position = Vector2(238, 420)
 script = ExtResource("2_spot")
 
 [node name="LeftB" type="Area2D" parent="TowerSpots" unique_id=383877320]
-position = Vector2(367, 416)
+position = Vector2(387, 422)
 script = ExtResource("2_spot")
 
 [node name="LeftC" type="Area2D" parent="TowerSpots" unique_id=1232607075]
-position = Vector2(385, 277)
+position = Vector2(398, 220)
 script = ExtResource("2_spot")
 
 [node name="LeftD" type="Area2D" parent="TowerSpots" unique_id=2146371786]
-position = Vector2(540, 208)
+position = Vector2(539, 220)
 script = ExtResource("2_spot")
 
 [node name="RouterRight" type="Area2D" parent="TowerSpots" unique_id=627925254]
@@ -133,40 +135,40 @@ script = ExtResource("2_spot")
 is_router = true
 
 [node name="RightA" type="Area2D" parent="TowerSpots" unique_id=1224562889]
-position = Vector2(1035, 350)
+position = Vector2(1039, 419)
 script = ExtResource("2_spot")
 
 [node name="RightB" type="Area2D" parent="TowerSpots" unique_id=1228726864]
-position = Vector2(898, 433)
+position = Vector2(883, 417)
 script = ExtResource("2_spot")
 
 [node name="RightC" type="Area2D" parent="TowerSpots" unique_id=373402480]
-position = Vector2(900, 281)
+position = Vector2(885, 222)
 script = ExtResource("2_spot")
 
 [node name="RightD" type="Area2D" parent="TowerSpots" unique_id=1591142707]
-position = Vector2(773, 225)
+position = Vector2(754, 221)
 script = ExtResource("2_spot")
 
 [node name="RouterBottom" type="Area2D" parent="TowerSpots" unique_id=1894237534]
-position = Vector2(640, 597)
+position = Vector2(652, 625)
 script = ExtResource("2_spot")
 is_router = true
 
 [node name="BottomA" type="Area2D" parent="TowerSpots" unique_id=920546902]
-position = Vector2(560, 500)
+position = Vector2(528, 421)
 script = ExtResource("2_spot")
 
 [node name="BottomB" type="Area2D" parent="TowerSpots" unique_id=199206006]
-position = Vector2(720, 500)
+position = Vector2(758, 420)
 script = ExtResource("2_spot")
 
 [node name="BottomC" type="Area2D" parent="TowerSpots" unique_id=463470447]
-position = Vector2(509, 349)
+position = Vector2(387, 360)
 script = ExtResource("2_spot")
 
 [node name="BottomD" type="Area2D" parent="TowerSpots" unique_id=466768420]
-position = Vector2(765, 362)
+position = Vector2(883, 361)
 script = ExtResource("2_spot")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1838790387]
