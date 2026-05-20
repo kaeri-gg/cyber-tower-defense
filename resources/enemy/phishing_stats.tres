@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1")
 enemy = 5
-speed = 110
+hp = 25
+speed = 125
 ability = 5
 display_name = "Phishing"

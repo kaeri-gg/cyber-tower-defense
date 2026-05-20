@@ -1,14 +1,12 @@
-[gd_resource type="Resource" script_class="EnemyResource" format=3]
+[gd_resource type="Resource" script_class="EnemyResource" format=3 uid="uid://c8oltujfe3743"]
 
 [ext_resource type="Script" uid="uid://3qieyqicwcd5" path="res://scripts/resources/enemy_resource.gd" id="1"]
 
 [resource]
 script = ExtResource("1")
 enemy = 3
-hp = 200
-speed = 70
-armor = 0
-lives_cost = 1
+hp = 50
+speed = 50
 threat_level = 1
 ability = 3
 display_name = "Spyware"

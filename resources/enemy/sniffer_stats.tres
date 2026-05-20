@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1")
-hp = 70
+hp = 25
 speed = 100
 display_name = "Sniffer"

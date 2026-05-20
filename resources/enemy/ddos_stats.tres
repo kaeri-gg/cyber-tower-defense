@@ -5,10 +5,8 @@
 [resource]
 script = ExtResource("1")
 enemy = 1
-hp = 300
-speed = 50
-armor = 0
-lives_cost = 1
+hp = 75
+speed = 25
 threat_level = 1
 ability = 1
 display_name = "DDOS"
