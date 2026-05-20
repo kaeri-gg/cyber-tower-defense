@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://0vu5f4eno1e0"
-path="res://.godot/imported/ShantellSans-Light.ttf-c290eb33c7c02022d6d90acf579daf8d.fontdata"
+uid="uid://d0x2cxb81ytiq"
+path="res://.godot/imported/Asimovian-Regular.ttf-96b0c22d1b283a6ba86bbba511b4e883.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/ShantellSans-Light.ttf"
-dest_files=["res://.godot/imported/ShantellSans-Light.ttf-c290eb33c7c02022d6d90acf579daf8d.fontdata"]
+source_file="res://assets/fonts/Asimovian-Regular.ttf"
+dest_files=["res://.godot/imported/Asimovian-Regular.ttf-96b0c22d1b283a6ba86bbba511b4e883.fontdata"]
 
 [params]
 

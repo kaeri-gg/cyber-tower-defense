@@ -44,6 +44,8 @@ func _process(delta: float) -> void:
 		reached_end.emit(self)
 		_cleanup()
 
+const _BOUNTY := [5, 10, 25]  # indexed by threat_levels: LOW, MEDIUM, HIGH
+
 func take_damage(amount: int) -> void:
 	if current_hp <= 0:
 		return
@@ -54,6 +56,7 @@ func take_damage(amount: int) -> void:
 	var tw := create_tween()
 	tw.tween_property(polygon, "modulate", Color.WHITE, 0.15)
 	if current_hp <= 0:
+		game_state.add_gold(_BOUNTY[enemy_stats.threat_level])
 		died.emit(self)
 		_cleanup()
 

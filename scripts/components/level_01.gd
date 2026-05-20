@@ -47,7 +47,7 @@ var _cooldown_remaining: float = 0.0
 var _enemy_pool: Array = []
 
 func _ready() -> void:
-	_enemy_pool = [SNIFFER, DDOS, TROJAN, SPYWARE, VIRUS, PHISHING, RANSOMWARE]
+	_enemy_pool = [SNIFFER, DDOS, TROJAN, SPYWARE, VIRUS, PHISHING]  # HIGH-threat enemies excluded from trickle
 	_build_waves()
 	game_state.reset()
 	game_state.gold_changed.connect(func(v: int) -> void: gold_label.text = "Money: %d" % v)
@@ -123,9 +123,13 @@ func _on_picker_selected(spot: TowerSpot, def: DefenseResource) -> void:
 	if not game_state.spend_gold(def.base_cost):
 		selected_label.text = "Not enough money for %s." % def.display_name
 		return
-	# Override: clear existing tower (no refund).
 	if spot.occupied:
+		var refund := 0
+		if spot.current_tower != null and is_instance_valid(spot.current_tower) and spot.current_tower.tower_data != null:
+			refund = spot.current_tower.tower_data.base_cost / 2
 		spot.clear_tower()
+		if refund > 0:
+			game_state.add_gold(refund)
 	var tower: DefenseTower = TOWER_SCENE.instantiate()
 	tower.tower_data = def
 	tower.global_position = spot.global_position
@@ -208,6 +212,7 @@ func _check_wave_end() -> void:
 	if wave_index + 1 >= waves.size():
 		game_state.win()
 	else:
+		game_state.add_gold(50)
 		_run_cooldown()
 
 # -------------------------------------------------------- cooldown + trickle

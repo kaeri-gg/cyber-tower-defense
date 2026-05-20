@@ -1,33 +1,307 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://buk3vr2n7wmex"]
 
-[ext_resource type="Script" path="res://scripts/components/defense_picker.gd" id="1_picker"]
+[ext_resource type="Script" uid="uid://uttsepsbysw5" path="res://scripts/components/defense_picker.gd" id="1_picker"]
+[ext_resource type="FontFile" uid="uid://bptcj2yylvotg" path="res://assets/fonts/Play-Bold.ttf" id="2_uj0du"]
+[ext_resource type="FontFile" uid="uid://d0x2cxb81ytiq" path="res://assets/fonts/Asimovian-Regular.ttf" id="3_x6y3m"]
+[ext_resource type="FontFile" uid="uid://bkbersnio3cg5" path="res://assets/fonts/Play-Regular.ttf" id="5_x6o8i"]
 
-[node name="DefensePicker" type="PopupPanel"]
+[sub_resource type="Theme" id="Theme_2rusm"]
+Button/fonts/font = ExtResource("2_uj0du")
+
+[sub_resource type="Theme" id="Theme_x6o8i"]
+Label/font_sizes/font_size = 14
+Label/fonts/font = ExtResource("2_uj0du")
+
+[sub_resource type="Theme" id="Theme_x6y3m"]
+Label/font_sizes/font_size = 12
+Label/fonts/font = ExtResource("5_x6o8i")
+
+[node name="DefensePicker" type="PopupPanel" unique_id=1754107595]
+oversampling_override = 1.0
+size = Vector2i(300, 395)
+visible = true
 script = ExtResource("1_picker")
-size = Vector2i(300, 380)
 
-[node name="Margin" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1565194801]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
+theme = SubResource("Theme_2rusm")
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
 
-[node name="VBox" type="VBoxContainer" parent="Margin"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1277768288]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer/PanelContainer" unique_id=250329525]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="Title" type="Label" parent="Margin/VBox"]
+[node name="Title" type="Label" parent="MarginContainer/PanelContainer/VBox" unique_id=1231785763]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = ExtResource("3_x6y3m")
+theme_override_font_sizes/font_size = 17
+text = "Deploy a Defense"
 horizontal_alignment = 1
-text = "Choose Defense"
 
-[node name="Buttons" type="VBoxContainer" parent="Margin/VBox"]
+[node name="Buttons" type="VBoxContainer" parent="MarginContainer/PanelContainer/VBox" unique_id=396580504]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 4
+
+[node name="Firewall" type="Button" parent="MarginContainer/PanelContainer/VBox/Buttons" unique_id=446566]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Firewall" unique_id=88151788]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 44.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Firewall/VBoxContainer" unique_id=14279209]
+layout_mode = 2
+theme = SubResource("Theme_x6o8i")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+
+[node name="Defense_name" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Firewall/VBoxContainer/MarginContainer" unique_id=782066756]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.42022175, 0.3569468, 0.9992104, 1)
+text = "Firewall"
+
+[node name="Cost" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Firewall/VBoxContainer/MarginContainer" unique_id=798976844]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.81960785, 0.101960786, 1)
+text = "50g"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Firewall/VBoxContainer" unique_id=1510585056]
+layout_mode = 2
+theme = SubResource("Theme_x6y3m")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Goods_againts" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Firewall/VBoxContainer/MarginContainer2" unique_id=420888963]
+layout_mode = 2
+text = "Good against: DDOS"
+
+[node name="Antivirus" type="Button" parent="MarginContainer/PanelContainer/VBox/Buttons" unique_id=110001]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Antivirus" unique_id=110002]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 44.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Antivirus/VBoxContainer" unique_id=110003]
+layout_mode = 2
+theme = SubResource("Theme_x6o8i")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+
+[node name="Defense_name" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Antivirus/VBoxContainer/MarginContainer" unique_id=110004]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.42022175, 0.3569468, 0.9992104, 1)
+text = "Antivirus"
+
+[node name="Cost" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Antivirus/VBoxContainer/MarginContainer" unique_id=110005]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.81960785, 0.101960786, 1)
+text = "70g"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Antivirus/VBoxContainer" unique_id=110006]
+layout_mode = 2
+theme = SubResource("Theme_x6y3m")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Goods_againts" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Antivirus/VBoxContainer/MarginContainer2" unique_id=110007]
+layout_mode = 2
+text = "Good against: Trojan, Spyware, Virus"
+
+[node name="Encryption" type="Button" parent="MarginContainer/PanelContainer/VBox/Buttons" unique_id=220001]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Encryption" unique_id=220002]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 44.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Encryption/VBoxContainer" unique_id=220003]
+layout_mode = 2
+theme = SubResource("Theme_x6o8i")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+
+[node name="Defense_name" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Encryption/VBoxContainer/MarginContainer" unique_id=220004]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.42022175, 0.3569468, 0.9992104, 1)
+text = "Encryption"
+
+[node name="Cost" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Encryption/VBoxContainer/MarginContainer" unique_id=220005]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.81960785, 0.101960786, 1)
+text = "80g"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Encryption/VBoxContainer" unique_id=220006]
+layout_mode = 2
+theme = SubResource("Theme_x6y3m")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Goods_againts" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Encryption/VBoxContainer/MarginContainer2" unique_id=220007]
+layout_mode = 2
+text = "Good against: Sniffer, Trojan, Ransomware"
+
+[node name="Update" type="Button" parent="MarginContainer/PanelContainer/VBox/Buttons" unique_id=330001]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Update" unique_id=330002]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 44.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Update/VBoxContainer" unique_id=330003]
+layout_mode = 2
+theme = SubResource("Theme_x6o8i")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+
+[node name="Defense_name" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Update/VBoxContainer/MarginContainer" unique_id=330004]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.42022175, 0.3569468, 0.9992104, 1)
+text = "System Update"
+
+[node name="Cost" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Update/VBoxContainer/MarginContainer" unique_id=330005]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.81960785, 0.101960786, 1)
+text = "60g"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Update/VBoxContainer" unique_id=330006]
+layout_mode = 2
+theme = SubResource("Theme_x6y3m")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Goods_againts" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Update/VBoxContainer/MarginContainer2" unique_id=330007]
+layout_mode = 2
+text = "Good against: Ransomware"
+
+[node name="Password" type="Button" parent="MarginContainer/PanelContainer/VBox/Buttons" unique_id=440001]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Password" unique_id=440002]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 44.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Password/VBoxContainer" unique_id=440003]
+layout_mode = 2
+theme = SubResource("Theme_x6o8i")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+
+[node name="Defense_name" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Password/VBoxContainer/MarginContainer" unique_id=440004]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.42022175, 0.3569468, 0.9992104, 1)
+text = "Password"
+
+[node name="Cost" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Password/VBoxContainer/MarginContainer" unique_id=440005]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.81960785, 0.101960786, 1)
+text = "40g"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/Password/VBoxContainer" unique_id=440006]
+layout_mode = 2
+theme = SubResource("Theme_x6y3m")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Goods_againts" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/Password/VBoxContainer/MarginContainer2" unique_id=440007]
+layout_mode = 2
+text = "Good against: Sniffer, Phishing"
+
+[node name="CyberBehavior" type="Button" parent="MarginContainer/PanelContainer/VBox/Buttons" unique_id=550001]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/CyberBehavior" unique_id=550002]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 44.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/CyberBehavior/VBoxContainer" unique_id=550003]
+layout_mode = 2
+theme = SubResource("Theme_x6o8i")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+
+[node name="Defense_name" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/CyberBehavior/VBoxContainer/MarginContainer" unique_id=550004]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.42022175, 0.3569468, 0.9992104, 1)
+text = "Cyber Behavior"
+
+[node name="Cost" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/CyberBehavior/VBoxContainer/MarginContainer" unique_id=550005]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.81960785, 0.101960786, 1)
+text = "50g"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/PanelContainer/VBox/Buttons/CyberBehavior/VBoxContainer" unique_id=550006]
+layout_mode = 2
+theme = SubResource("Theme_x6y3m")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Goods_againts" type="Label" parent="MarginContainer/PanelContainer/VBox/Buttons/CyberBehavior/VBoxContainer/MarginContainer2" unique_id=550007]
+layout_mode = 2
+text = "Good against: Trojan, Phishing"

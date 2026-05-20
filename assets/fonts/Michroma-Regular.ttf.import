@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cnqvv2fq4nkmg"
-path="res://.godot/imported/ShantellSans-ExtraBold.ttf-9becac8bedf171d5a1f360ebc122cb8e.fontdata"
+uid="uid://b41jvurake1y"
+path="res://.godot/imported/Michroma-Regular.ttf-928de7d8513fc5249047ef3681175fc2.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/ShantellSans-ExtraBold.ttf"
-dest_files=["res://.godot/imported/ShantellSans-ExtraBold.ttf-9becac8bedf171d5a1f360ebc122cb8e.fontdata"]
+source_file="res://assets/fonts/Michroma-Regular.ttf"
+dest_files=["res://.godot/imported/Michroma-Regular.ttf-928de7d8513fc5249047ef3681175fc2.fontdata"]
 
 [params]
 
