@@ -4,11 +4,6 @@
 
 [resource]
 script = ExtResource("1")
-enemy = 0
-hp = 100
+hp = 70
 speed = 100
-armor = 0
-lives_cost = 1
-threat_level = 0
-ability = 0
 display_name = "Sniffer"

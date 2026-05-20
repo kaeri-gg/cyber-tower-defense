@@ -11,7 +11,7 @@ var current_wave: int = 0
 var is_game_over: bool = false
 
 func reset() -> void:
-	gold = 1000
+	gold = 500
 	lives = 20
 	current_wave = 0
 	is_game_over = false

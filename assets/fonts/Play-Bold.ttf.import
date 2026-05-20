@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cq20jyx8gbygk"
-path="res://.godot/imported/ShantellSans-SemiBold.ttf-f9d2cb3ea0cd5dad389c60e0c1fd597e.fontdata"
+uid="uid://bptcj2yylvotg"
+path="res://.godot/imported/Play-Bold.ttf-b7d7d7dc1a34bf2b896d67854934e3c8.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/ShantellSans-SemiBold.ttf"
-dest_files=["res://.godot/imported/ShantellSans-SemiBold.ttf-f9d2cb3ea0cd5dad389c60e0c1fd597e.fontdata"]
+source_file="res://assets/fonts/Play-Bold.ttf"
+dest_files=["res://.godot/imported/Play-Bold.ttf-b7d7d7dc1a34bf2b896d67854934e3c8.fontdata"]
 
 [params]
 

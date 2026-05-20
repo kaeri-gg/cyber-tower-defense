@@ -1,7 +1,5 @@
 [gd_resource type="Theme" format=3 uid="uid://dbd7sj28jdmjd"]
 
-[ext_resource type="FontFile" uid="uid://bwefsygekyimg" path="res://assets/fonts/ShantellSans-Medium.ttf" id="1_4xlgu"]
-
 [sub_resource type="Gradient" id="Gradient_rfnis"]
 colors = PackedColorArray(0.7620348, 0.7912758, 0.98326784, 1, 0.9843137, 0.9411765, 0.9843137, 0.96862745)
 
@@ -15,5 +13,5 @@ texture = SubResource("GradientTexture2D_4xlgu")
 
 [resource]
 Label/colors/font_color = Color(0.22352941, 0.22352941, 0.22352941, 1)
-Label/fonts/font = ExtResource("1_4xlgu")
+Label/fonts/font = null
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_ljrkl")
